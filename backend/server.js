@@ -59,7 +59,7 @@ app.post('/login', (req, res) => {
 
 function getUserRole(username) {
   if (username.startsWith('wour/')) {
-    return 'student';
+    return 'otheruser';
   } else if (username.startsWith('tech/')) {
     return 'staff';
   } else {
