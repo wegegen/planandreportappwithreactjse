@@ -1,11 +1,10 @@
 import React from 'react'
-import plan from './plan'
-function Home () {
+import 'bootstrap/dist/css/bootstrap.min.css'
+function plan  (){
   return (
-    
     <div className=''>
       <h1 className='d-flex justify-content-center align-items-center rounded bg-secondary m-0'>Making  Plan  Process </h1>
-<div className='d-flex justify-content-center align-items-center rounded bg-secondary m-1'>
+<div className='d-flex justify-content-center align-items-center rounded bg-secondary m-0'>
 
 
 <table className="bg-white p-3  w-25">
@@ -42,4 +41,4 @@ function Home () {
   )
 }
 
-export default Home;
+export default plan

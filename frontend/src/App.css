@@ -1,17 +1,38 @@
 .App {
   text-align: center;
+   z-index: 1;
 }
 
 .App-logo {
-  height: 40vmin;
+  height: vmin;
   pointer-events: none;
+ 
+  
+  
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+
+  .h1header {
+    position: relative;
+   
+    z-index: 1;
   }
-}
+
+  .myform{
+     position: relative;
+   
+    z-index: 1;
+  }
+
+
+/* @media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 2s linear;
+   
+
+    
+  }
+} */
 
 .App-header {
   background-color: #282c34;
@@ -28,11 +49,30 @@
   color: #61dafb;
 }
 
-@keyframes App-logo-spin {
+/* @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
+  
   }
   to {
-    transform: rotate(360deg);
+    transform: rotate(50deg);
+  }
+} */
+
+@keyframes App-logo-spin {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-50px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 4s ease-in-out;
   }
 }

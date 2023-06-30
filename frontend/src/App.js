@@ -26,6 +26,7 @@ import Login from './Login';
 import Signup from './Signup';
 import Home from './Home';
 import Staff from './Staff';
+import './App.css'
 
 function App() {
   return (
@@ -37,6 +38,7 @@ function App() {
         <Route path="/signup" element={<Signup />} />
         <Route path="/home" element={<Home />} />
         <Route path="/staff" element={<Staff />} />
+        
 
       </Routes>
     </Router>
