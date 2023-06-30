@@ -2,7 +2,7 @@
 import React, { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import axios from 'axios';
-
+import logo from './images/logo.svg';
 import LoginValidation from './LoginValidation';
 
 function Login() {
@@ -30,16 +30,34 @@ function Login() {
           navigate('/home');
         } else if (res.data.success === 'staff') {
           navigate('/staff');
-        } else {
-          alert('Invalid role');
-        }
+        } 
+        
+        
+        // else {
+        //   alert('Invalid role');
+        // }
+
       })
       .catch((err) => console.log(err));
   }
 };
   return (
-    <div className="d-flex justify-content-center align-items-center bg-primary vh-100">
-      <div className="bg-white p-3 rounded w-25">
+
+<div className=''>
+<h1 className='d-flex justify-content-center align-items-center rounded bg-secondary m-0'>KIOT PLAN AND REPORT</h1>
+
+<div className="d-flex justify-content-center rounded align-items-center ">
+  {/* <img src={logo} alt=""/> */}
+   <img src={require('./images/uuu.png')} alt=""  />
+</div>
+
+   
+<div className='d-flex justify-content-center rounded bg-secondary vh-60 m-0'>
+
+
+      <div className="bg-white p-3  w-25">
+
+      
         <h1>Login page</h1>
         <form onSubmit={handleSubmit}>
           <div className="mb-3">
@@ -77,6 +95,7 @@ function Login() {
           </Link>
         </form>
       </div>
+    </div>
     </div>
   );
 }

@@ -46,12 +46,18 @@ app.post('/login', (req, res) => {
 
       if (userRole === 'otheruser') {
         return res.json({ success: "otheruser" });
-      } else if (userRole === 'staff') {
+      } 
+      
+      else if (userRole === 'staff') {
         return res.json({ success: "staff" });
-      } else {
-        return res.json({ error: "Invalid role" });
-      }
-    } else {
+      } 
+      
+      // else {
+      //   return res.json({ error: "Invalid role" });
+      // }
+    }
+    
+    else {
       return res.json({ error: "Fail" });
     }
   });

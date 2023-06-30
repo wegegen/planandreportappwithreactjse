@@ -20,20 +20,35 @@ function Signup() {
     setValues(prev => ({ ...prev, [event.target.name]: event.target.value }));
   };
 
-  const handleSubmit = (event) => {
-    event.preventDefault();
-    setErrors(Validation(values));
-    if (Object.keys(errors).length === 0) {
-      axios.post('http://localhost:8081/signup', values)
-        .then(res => {
-          navigate('/login');
-        })
-        .catch(err => console.log(err));
+  // const handleSubmit = (event) => {
+  //   event.preventDefault();
+  //   setErrors(Validation(values));
+  //   if (Object.keys(errors).length === 0) {
+  //     axios.post('http://localhost:8081/signup', values)
+  //       .then(res => {
+  //         navigate('/login');
+  //       })
+  //       .catch(err => console.log(err));
+  //   }
+  // };
+const handleSubmit = async (event) => {
+  event.preventDefault();
+  const validationErrors = Validation(values);
+  setErrors(validationErrors);
+
+  if (Object.keys(validationErrors).length === 0) {
+    try {
+      await axios.post('http://localhost:8081/signup', values);
+      navigate('/login');
+    } catch (err) {
+      console.error('Signup error:', err);
     }
-  };
+  }
+};
 
   return (
-    <div className='d-flex justify-content-center align-item-center bg-primary vh-100'>
+    <div className='d-flex justify-content-center align-items-center bg-secondary vh-100'>
+                    
       <div className='bg-white p-3 rounded w-25'>
         <h1>Signup page</h1>
         <form onSubmit={handleSubmit}>
@@ -54,7 +69,7 @@ function Signup() {
           </div>
           <button type='submit' className="btn btn-success w-100 rounded-0">Signup</button>
           <p>Already have an account?</p>
-          <Link to="/login" className='btn btn-default border w-100 bg-secondary w-100 text-decoration-none'>Login</Link>
+          <Link to="/" className='btn btn-default border w-100 bg-secondary w-100 text-decoration-none'>Login</Link>
         </form>
       </div>
     </div>
