@@ -38,7 +38,7 @@ const handleSubmit = async (event) => {
 
   if (Object.keys(validationErrors).length === 0) {
     try {
-      await axios.post('http://localhost:8083/signup', values);
+      await axios.post('http://localhost:8081/signup', values);
       navigate('/');
     } catch (err) {
       console.error('Signup error:', err);

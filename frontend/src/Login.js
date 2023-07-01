@@ -24,7 +24,7 @@ function Login() {
   if (Object.keys(errors).length === 0) {
     const { username, password } = values;
 
-    axios.post('http://localhost:8083/login', { username, password })
+    axios.post('http://localhost:8081/login', { username, password })
       .then((res) => {
         if (res.data.success === 'otheruser') {
           navigate('/home');

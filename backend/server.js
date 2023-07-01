@@ -74,6 +74,6 @@ function getUserRole(username) {
 }
 
 
-app.listen(8083, () => {
-  console.log("The server is listening on port 8081");
+app.listen(8081, () => {
+  console.log("The server is listening on port 8081 WEGE");
 });
