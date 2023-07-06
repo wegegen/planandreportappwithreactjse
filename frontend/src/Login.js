@@ -46,13 +46,13 @@ function Login() {
 <div className=''>
 <h1 className=' h1header d-flex justify-content-center align-items-center rounded bg-secondary m-0'>KIOT PLAN AND REPORT</h1>
 
-<div className=" App justify-content-center rounded align-items-center m-1 vh-10 " >
+ <div className=" App justify-content-center rounded align-items-center m-1 vh-10 " >
   {/* <img src={logo} alt=""/> */}
    <img src={require('./images/uuu.png')} alt="" className='App-logo '  />
-</div>
+  </div>
 
    
-<div className=' myform d-flex justify-content-center rounded  bg-body-tertiary vh-60 m-0'>
+  <div className=' myform d-flex justify-content-center rounded  bg-body-tertiary vh-60 m-0'>
 
 
       <div className="bg-white p-3  w-50">
@@ -92,6 +92,8 @@ function Login() {
           <p>Don't have an account?</p>
           <Link to="/signup" className="btn btn-default border w-100 bg-secondary text-decoration-none">
             Create Account
+          </Link> <Link to="/page" className="btn btn-default border w-100 bg-secondary text-decoration-none">
+            Create oo
           </Link>
         </form>
       </div>

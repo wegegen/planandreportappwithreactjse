@@ -74,6 +74,26 @@ function getUserRole(username) {
 }
 
 
+
+
+// app.post('/page', (req, res) => {
+//   const { id, name, content } = req.body;
+
+//   const sql = 'INSERT INTO page (id, page_name, content) VALUES (?, ?, ?)';
+//   const values = [id, name, content];
+
+//   connection.query(sql, values, (err, result) => {
+//     if (err) {
+//       console.error('Error saving page: ', err);
+//       res.sendStatus(500);
+//       return;
+//     }
+//     console.log('Page saved successfully!');
+//     res.sendStatus(200);
+//   });
+// });
+
+
 app.listen(8081, () => {
   console.log("The server is listening on port 8081 WEGE");
 });

@@ -27,6 +27,8 @@ import Signup from './Signup';
 import Home from './Home';
 import Staff from './Staff';
 import './App.css'
+import Page from './Page';
+
 
 
 function App() {
@@ -39,6 +41,9 @@ function App() {
         <Route path="/signup" element={<Signup />} />
         <Route path="/home" element={<Home />} />
         <Route path="/staff" element={<Staff />} />
+        <Route path="/page" element={<Page />} />
+        
+
         
 
         
